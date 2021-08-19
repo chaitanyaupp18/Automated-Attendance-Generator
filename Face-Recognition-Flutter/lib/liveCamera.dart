@@ -106,21 +106,10 @@ class LiveCameraState extends State<LiveCamera> {
               imglib.Image croppedImage = imglib.copyCrop(
                   convertedImage, x.round(), y.round(), w.round(), h.round());
               croppedImage = imglib.copyResizeCropSquare(croppedImage, 112);
-              // int startTime = new DateTime.now().millisecondsSinceEpoch;
+              
               res = _recog(croppedImage);
-              // int endTime = new DateTime.now().millisecondsSinceEpoch;
-              // print("Inference took ${endTime - startTime}ms");
-              // if (res != 'NO FACE SAVED' || res != 'NOT RECOGNIZED') {
-              //   attendees.add(res);
-              // }
 
-              // if ((res.allMatches("NOT RECOGNIZED") == null &&
-              //     res.allMatches("NO FACE SAVED") == null)) {
-              //   print("\n----face----\n");
-              //   print("xD");
-              //   print(res);
-              //
-              // }
+
               finalResult.add(res, _face);
             }
             setState(() {
@@ -235,12 +224,7 @@ class LiveCameraState extends State<LiveCamera> {
         FloatingActionButton(
             child: Icon(Icons.done),
             onPressed: () async {
-              // await _camera.stopImageStream();
-              // await _camera.dispose();
-              //
-              // setState(() {
-              //   _camera = null;
-              // });
+
 
               Navigator.push(
                   context,
@@ -277,7 +261,7 @@ class LiveCameraState extends State<LiveCamera> {
       CameraImage image, CameraLensDirection _dir) {
     int width = image.width;
     int height = image.height;
-    // imglib -> Image package from https://pub.dartlang.org/packages/image
+    
     var img = imglib.Image(width, height); // Create Image buffer
     const int hexFF = 0xFF000000;
     final int uvyButtonStride = image.planes[1].bytesPerRow;
