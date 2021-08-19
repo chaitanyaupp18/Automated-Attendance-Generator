@@ -24,10 +24,10 @@ class MailPage extends StatefulWidget {
 
 class MailPageState extends State<MailPage> {
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
-  final String g_url = "https://sriks.pythonanywhere.com/query";
+  
   final g_url1 = {
     "Subject1":
-        "https://script.google.com/macros/s/AKfycbyC1aAXWt4jm5ggdpBemnO3DCdX8lXm1zV9ehzqYyTnPksk9gxZKjqQ67MwLdp2dlqX/exec"
+        "<PASTE THE LINK OF GOOGLE SHEET"
   };
   String imgUrl;
   String mail_id;
