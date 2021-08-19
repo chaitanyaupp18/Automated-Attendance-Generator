@@ -17,7 +17,7 @@ class AttendViewerState extends State<AttendViewer> {
       body: Container(
         child: EasyWebView(
           src:
-              'https://docs.google.com/spreadsheets/d/1G_HtHFfxE6NwtBD1ULJi97oVwTnAWhhGtiJMs-uMbbA/edit?usp=sharing',
+              '<PASTE THE LINK OF GOOGLE SHEET',
           // javascriptMode: JavascriptMode.unrestricted,
         ),
       ),
